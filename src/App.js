@@ -5,7 +5,12 @@ import {Todos} from './MyComponents/Todos';
 import {Footer} from './MyComponents/Footer';
 import {AddTodo} from './MyComponents/AddTodo';
 import React,{useState} from 'react';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 function App() {
   const addTodo=(title,desc)=>{
     let sno=todos.length+1;
