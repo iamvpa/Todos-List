@@ -6,7 +6,7 @@ import {Footer} from './MyComponents/Footer';
 function App() {
   return (
     <>
-    <Header/>
+    <Header title="VPA"/>
      <Todos/>
      <Footer/>
     </>
