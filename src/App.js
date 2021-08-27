@@ -3,9 +3,20 @@ import './App.css';
 import Header from './MyComponents/Header';
 import {Todos} from './MyComponents/Todos';
 import {Footer} from './MyComponents/Footer';
+import {AddTodo} from './MyComponents/AddTodo';
 import React,{useState} from 'react';
 
 function App() {
+  const addTodo=(title,desc)=>{
+    let sno=todos.length+1;
+const myTodo={
+sno:sno,
+title:title,
+desc:desc
+}
+setTodos([...todos,myTodo]);
+console.log(myTodo);
+  }
   const onDelete=(todo)=>{
     console.log("I am on delete",todo);
     setTodos(todos.filter((e)=>{return e!==todo;}))
@@ -30,7 +41,9 @@ function App() {
   ]);
   return (
     <>
-    <Header title="VPA" searchBar={false}/>
+    
+    <Header title="My Todos List" searchBar={false}/>
+    <AddTodo addTodo={addTodo}/>
      <Todos todos={todos} onDelete={onDelete}/>
      <Footer/>
     </>
