@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export default function Header(props) {
     return (
         <div>
@@ -26,4 +27,12 @@ export default function Header(props) {
       </nav>
         </div>
     )
+}
+Header.defaultProps={
+    title:"Your title here",
+    searchBar:true
+}
+Header.protoTypes={
+    title:PropTypes.string,
+    searchBar:PropTypes.bool.isRequired
 }
